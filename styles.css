@@ -1,0 +1,136 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'fraunce';
+    src: url(Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+@font-face {
+    font-family: 'montserrat';
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+:root{
+    --radius: 12px;
+    --background: hsl(158, 36%, 37%);
+}
+.mobile{
+    display: none;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    margin: 100px auto;
+
+}
+.tab{
+    width: 100%;
+}
+
+/* div ONE */
+.img-device{
+    width: 100%;
+    height: 100%;
+}
+.desktop{
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+p{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+
+}
+.title{
+    color: hsl(212, 21%, 14%);
+}
+/* DIV TWO */
+div.blog{
+    padding: 10px 30px;
+    background-color: white;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+.perfume{
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+h1{
+    font-family: 'fraunce';
+}
+p{
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+.discount-price{
+    margin-left: 15px;
+}
+.main-price{
+    color: var(--background);
+}
+button{
+    background-color: var(--background);
+    font-family: 'montserrat';
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: hsl(158, 39%, 22%);
+}
+button:active{
+    background-color: hsl(158, 39%, 22%);
+}
+.cart{
+    padding-right: 10px;
+    align-self: center;
+}@media(max-width: 760px){
+    .main{
+        margin-top: 8%;
+    }
+}
+@media (max-width: 550px) {
+    body{
+        margin: 0;
+    }
+    .main{
+        grid-template-columns: 1fr;
+        margin: 25px 15px;
+    }
+    /* DIV ONE */
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: initial;
+        border-top-right-radius: var(--radius);
+        border-top-left-radius: var(--radius);
+    }
+    /* DIV TWO */
+    div.blog{
+        padding-bottom: 50px;
+        border-top-right-radius: 0;
+    }
+}
+@media (max-width: 370px) {
+    .main{
+        margin: 10px 10px;
+    }
+    div.blog{
+        padding-bottom: 30px;
+        border-bottom-left-radius: var(--radius);
+        border-bottom-right-radius: var(--radius);
+    }
+}
